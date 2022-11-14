@@ -21,7 +21,7 @@
 
 		delate : 
 			ALTER TABLE table_name
-			DROP COLUMN column_name; 
+			DROP column_name; 
 	     
 		Modify :		
 			ALTER TABLE table_name
@@ -140,6 +140,30 @@
 			
 
 7. Aggregate Function(sum, avg, min,max)
+Count : 
+	SELECT COUNT(column_name)
+	FROM table_name
+	WHERE condition;
+
+Sum :
+	SELECT SUM(column_name)
+	FROM table_name
+	WHERE condition;
+Avg : 
+	SELECT AVG(column_name)
+	FROM table_name
+	WHERE condition;
+
+MAX : 
+	SELECT MAX(column_name)
+	FROM table_name
+	WHERE condition;
+	
+MIN : 
+	SELECT MIN(column_name)
+	FROM table_name
+	WHERE condition;
+
 
 8. Triggers Operations ( Create, show, drop, Before, After)  
 	Trigger :
@@ -163,3 +187,13 @@ Update a cell into table:
 	SET columnname = newvalue
 	WHERE condition;
 	condition example: columnname = previousvalue;
+
+
+Check Constrain : it is used to set a limit;
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    CHECK (Age>=18)
+);
